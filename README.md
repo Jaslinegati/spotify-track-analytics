@@ -54,17 +54,17 @@ Ranks all 113 genres by average popularity and hit rate. Identifies which genres
 **Part 4 — The Mood Map**  
 Plots 3,000 tracks on a Valence × Energy scatter coloured by popularity. Reveals four emotional quadrants and their average popularity scores.
 
-![Mood Map](data/processed/mood_map.png)
+![Mood Map](assets/mood_map.png)
 
 **Part 5 — Hit Prediction Model**  
 Trains Logistic Regression and Random Forest on 12 audio + metadata features. Compares AUC and extracts feature importance.
 
-![Feature Importance](data/processed/hit_prediction_model.png)
+![Feature Importance](assets/hit_prediction_model.png)
 
 **Part 6 — Song Clustering**  
 K-Means clustering (k=5) groups songs by audio DNA without genre labels. Elbow method used to select k. Clusters labelled: Party Anthems, Acoustic/Chill, Instrumental/Ambient, Rap/Spoken Word, Mainstream Pop.
 
-![Song Clusters](data/processed/song_clusters.png)
+![Song Clusters](assets/song_clusters.png)
 
 ---
 
