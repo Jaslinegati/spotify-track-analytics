@@ -2,13 +2,13 @@
 ### What makes a song go viral?
 
 **Tools:** Python · pandas · scikit-learn · seaborn · K-Means  
-**Dataset:** [Spotify Tracks Dataset](https://huggingface.co/datasets/maharshipandya/spotify-tracks-dataset) — 89,741 tracks across 113 genres
+**Dataset:** [Spotify Tracks Dataset](https://huggingface.co/datasets/maharshipandya/spotify-tracks-dataset) · 89,741 tracks across 113 genres
 
 ---
 
 ## Business Problem
 
-> *An A&R team at a record label wants to move beyond gut instinct when signing new artists. Can audio features alone predict whether a track will become a hit — and what should producers prioritise in the studio?*
+> *An A&R team at a record label wants to move beyond gut instinct when signing new artists. Can audio features alone predict whether a track will become a hit, and what should producers prioritise in the studio?*
 
 ---
 
@@ -20,7 +20,7 @@
 | **Genre** is the single strongest predictor of hit status | A&R teams should track which genres are trending each quarter |
 | **Euphoric tracks** (high energy + high valence) outperform all other mood quadrants | Production briefs should target the top-right of the mood map |
 | **Explicit tracks** score higher on average | Censoring for radio may actively hurt streaming numbers |
-| **Acoustic/ambient** clusters at low popularity | These genres serve niche audiences — don't market them as mainstream |
+| **Acoustic/ambient** clusters at low popularity | These genres serve niche audiences, don't market them as mainstream |
 
 ---
 
@@ -37,31 +37,31 @@ The Random Forest correctly separates hits from non-hits in ~78% of cases using 
 
 ## Analysis Walkthrough
 
-### Notebook 1 — Data Loading
+### Notebook 1: Data Loading
 Downloads 89k tracks from Hugging Face, inspects schema and data quality.
 
-### Notebook 2 — Full Analysis
+### Notebook 2: Full Analysis
 
-**Part 1 — Popularity Distribution**  
+**Part 1: Popularity Distribution**  
 Classifies all tracks into 4 tiers: Undiscovered / Mid-tier / Popular / Hit. Compares explicit vs clean track performance.
 
-**Part 2 — Audio Feature Correlations**  
+**Part 2: Audio Feature Correlations**  
 Measures which of Spotify's 9 audio dimensions (danceability, energy, valence, tempo, etc.) correlate most strongly with popularity. Includes a full feature correlation heatmap.
 
-**Part 3 — Genre Analysis**  
+**Part 3: Genre Analysis**  
 Ranks all 113 genres by average popularity and hit rate. Identifies which genres produce the most and fewest hits.
 
-**Part 4 — The Mood Map**  
+**Part 4: The Mood Map**  
 Plots 3,000 tracks on a Valence × Energy scatter coloured by popularity. Reveals four emotional quadrants and their average popularity scores.
 
 ![Mood Map](assets/mood_map.png)
 
-**Part 5 — Hit Prediction Model**  
+**Part 5: Hit Prediction Model**  
 Trains Logistic Regression and Random Forest on 12 audio + metadata features. Compares AUC and extracts feature importance.
 
 ![Feature Importance](assets/hit_prediction_model.png)
 
-**Part 6 — Song Clustering**  
+**Part 6: Song Clustering**  
 K-Means clustering (k=5) groups songs by audio DNA without genre labels. Elbow method used to select k. Clusters labelled: Party Anthems, Acoustic/Chill, Instrumental/Ambient, Rap/Spoken Word, Mainstream Pop.
 
 ![Song Clusters](assets/song_clusters.png)
@@ -85,4 +85,4 @@ jupyter lab
 
 ---
 
-*Prepared by Jasline Mwita — Data Analyst & Data Scientist*
+*Prepared by Jasline Mwita · Data Analyst & Data Scientist*
